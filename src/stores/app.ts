@@ -1,12 +1,13 @@
-import { ref, computed } from 'vue';
+import { ref } from 'vue';
 import { defineStore } from 'pinia';
+import type { CanvasLayer, GroupLayer, ImageLayer, TextLayer } from '@/types/CanvasLayer';
 
 export const useAppStore = defineStore('app', () => {
-  const count = ref(0)
-  const doubleCount = computed(() => count.value * 2)
-  function increment() {
-    count.value++
-  }
+    const layers = ref<CanvasLayer[]>([]);
 
-  return { count, doubleCount, increment }
-})
+    const addLayer = (layer: TextLayer|ImageLayer|GroupLayer) => {
+        layers.value.push(layer);
+    }
+
+    return { layers, addLayer };
+});
