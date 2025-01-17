@@ -1,0 +1,19 @@
+@import url(reset.scss);
+@import url(typo.scss);
+@import url(toolbar.scss);
+
+body {
+    margin-top: 2rem;
+    background: #333;
+}
+
+main {
+    width: calc(640px + 2rem);
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: .75rem;
+    position: relative;
+    background: #c0c0c0;
+    min-height: calc(100vh - 4rem);
+}

@@ -1,7 +1,9 @@
 <template>
-    <ToolBar />
+    <main>
+        <ToolBar />
 
-    <AppCanvas />
+        <AppCanvas />
+    </main>
 </template>
 
 <script setup lang="ts">

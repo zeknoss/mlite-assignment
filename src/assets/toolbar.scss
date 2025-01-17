@@ -1,0 +1,32 @@
+.toolbar {
+    position: sticky;
+    left: auto;
+    top: 1rem;
+    width: auto;
+    display: inline-flex;
+    gap: .2rem;
+    border-radius: .75rem;
+    overflow: hidden;
+    background: rgba(#fff, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    text-align: right;
+
+    button {
+        border: 0;
+        outline: none;
+        background: #fff;
+        color: #ff3c00;
+        display: inline-flex;
+        padding: .3rem .5rem;
+
+        &:hover {
+            color: #fff;
+            background: #ff3c00;
+        }
+
+        > span {
+            margin: auto;
+        }
+    }
+}

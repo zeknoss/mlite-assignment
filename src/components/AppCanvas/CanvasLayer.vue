@@ -5,9 +5,9 @@
 <script lang="ts" setup>
 import { CanvasLayerType, type CanvasLayer } from '@/types/CanvasLayer';
 import { computed, type PropType } from 'vue';
-import ImageLayer from './ImageLayer.vue';
-import TextLayer from './TextLayer.vue';
-import GroupLayer from './GroupLayer.vue';
+import ImageLayer from './CanvasLayer/ImageLayer.vue';
+import TextLayer from './CanvasLayer/TextLayer.vue';
+import GroupLayer from './CanvasLayer/GroupLayer.vue';
 
 const props = defineProps({
     layer: {

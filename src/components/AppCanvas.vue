@@ -1,14 +1,16 @@
 <template>
-    <ul class="layers">
-        <CanvasLayer v-for="(layer, index) of layers" :key="index" :layer="layer" />
+    <ul class="app-canvas" ref="leSortable">
+        <CanvasLayer v-for="layer of layers" :key="layer.id" :layer="layer" />
     </ul>
 </template>
 
 <script lang="ts" setup>
 import { useAppStore } from '@/stores/app';
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import CanvasLayer from './AppCanvas/CanvasLayer.vue';
 
 const store = useAppStore();
 const layers = computed(() => store.layers.filter(l => l.parent_id === null));
+
+const leSortable = ref<HTMLElement | null>(null);
 </script>
