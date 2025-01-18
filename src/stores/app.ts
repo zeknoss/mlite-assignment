@@ -1,15 +1,15 @@
 import { ref } from 'vue';
 import { defineStore } from 'pinia';
-import { CanvasLayerType, type CanvasLayer, type GroupLayer, type ImageLayer, type TextLayer } from '@/types/CanvasLayer';
+import { CanvasLayerType, type CanvasLayer, type ImageLayer, type TextLayer } from '@/types/CanvasLayer';
 
 export const useAppStore = defineStore('app', () => {
     const layers = ref<CanvasLayer[]>([]);
 
     /**
      * Add a new layer to store
-     * @param layer TextLayer|ImageLayer|GroupLayer
+     * @param layer TextLayer|ImageLayer
      */
-    const addLayer = (layer: TextLayer|ImageLayer|GroupLayer) => {
+    const addLayer = (layer: TextLayer|ImageLayer) => {
         layer.id = crypto.randomUUID();
         layers.value.push(layer);
     }

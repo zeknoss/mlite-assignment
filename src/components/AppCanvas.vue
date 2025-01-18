@@ -1,7 +1,7 @@
 <template>
-    <ul class="app-canvas" ref="leSortable">
+    <ul class="app-canvas" ref="sortableEl">
         <CanvasLayer
-            v-for="layer of layers"
+            v-for="layer of store.layers"
             :key="layer.id"
             :edit-active="layer.id === activeId"
             :layer="layer"
@@ -12,13 +12,19 @@
 
 <script lang="ts" setup>
 import { useAppStore } from '@/stores/app';
-import { computed, ref } from 'vue';
+import { ref } from 'vue';
 import CanvasLayer from './AppCanvas/CanvasLayer.vue';
-
-const store = useAppStore();
-const layers = computed(() => store.layers.filter(l => l.parent_id === null));
-
-const leSortable = ref<HTMLElement | null>(null);
+import { useDraggable } from 'vue-draggable-plus';
 
 const activeId = ref('');
+
+const store = useAppStore();
+
+const sortableEl = ref<HTMLElement | null>(null);
+useDraggable(sortableEl, store.layers, {
+    animation: 150,
+    onUpdate() {
+        store.$patch({ layers: store.layers });
+    },
+});
 </script>

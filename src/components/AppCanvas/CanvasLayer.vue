@@ -7,7 +7,6 @@ import { CanvasLayerType, type CanvasLayer } from '@/types/CanvasLayer';
 import { computed, type PropType } from 'vue';
 import ImageLayer from './CanvasLayer/ImageLayer.vue';
 import TextLayer from './CanvasLayer/TextLayer.vue';
-import GroupLayer from './CanvasLayer/GroupLayer.vue';
 
 const props = defineProps({
     layer: {
@@ -21,10 +20,8 @@ const comp = computed(() => {
         case CanvasLayerType.IMAGE:
             return ImageLayer;
         case CanvasLayerType.TEXT:
-            return TextLayer;
-        case CanvasLayerType.GROUP:
         default:
-            return GroupLayer;
+            return TextLayer;
     }
 });
 </script>

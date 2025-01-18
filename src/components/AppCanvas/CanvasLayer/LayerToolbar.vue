@@ -9,12 +9,12 @@
 import MBtn from '@/components/Generic/MBtn.vue';
 import MIcon from '@/components/Generic/MIcon.vue';
 import { useAppStore } from '@/stores/app';
-import type { GroupLayer, ImageLayer, TextLayer } from '@/types/CanvasLayer';
+import type { ImageLayer, TextLayer } from '@/types/CanvasLayer';
 import type { PropType } from 'vue';
 
 const props = defineProps({
     layer: {
-        type: Object as PropType<TextLayer|ImageLayer|GroupLayer>,
+        type: Object as PropType<TextLayer|ImageLayer>,
         required: true,
     },
     editActive: {

@@ -1,13 +1,11 @@
 export enum CanvasLayerType {
     IMAGE = "IMAGE",
-    TEXT = "TEXT",
-    GROUP = "GROUP"
+    TEXT = "TEXT"
 }
 
 export interface CanvasLayer {
     id: string;
     type: CanvasLayerType;
-    parent_id?: string|null;
 }
 
 export interface TextLayer extends CanvasLayer {
@@ -16,8 +14,4 @@ export interface TextLayer extends CanvasLayer {
 
 export interface ImageLayer extends CanvasLayer {
     src: string;
-}
-
-export interface GroupLayer extends CanvasLayer {
-    children: CanvasLayer[];
 }
