@@ -2,7 +2,7 @@
     <component
         :is="comp"
         :layer="layer as any"
-        :edic-active="editActive"
+        :edit-active="editActive"
     />
 </template>
 
