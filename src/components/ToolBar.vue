@@ -24,7 +24,7 @@ import MBtn from './Generic/MBtn.vue';
 const store = useAppStore();
 
 const addLayer = (type: CanvasLayerType) => {
-    const data: CanvasLayer = {
+    const data: Partial<CanvasLayer> = {
         type,
         id: '',
     };
@@ -36,10 +36,8 @@ const addLayer = (type: CanvasLayerType) => {
             (data as TextLayer).content = '';
             break;
     }
-    store.addLayer(data);
+    store.addLayer(data as CanvasLayer);
 };
 
-const dump = () => {
-    console.log(JSON.parse(JSON.stringify(store.layers)));
-};
+const dump = () => console.log(JSON.parse(JSON.stringify(store.layers)));
 </script>

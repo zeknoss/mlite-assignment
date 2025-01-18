@@ -1,5 +1,9 @@
 <template>
-    <component :is="comp" :layer="layer" />
+    <component
+        :is="comp"
+        :layer="layer as any"
+        :edic-active="editActive"
+    />
 </template>
 
 <script lang="ts" setup>
@@ -12,6 +16,10 @@ const props = defineProps({
     layer: {
         required: true,
         type: Object as PropType<CanvasLayer>
+    },
+    editActive: {
+        type: Boolean,
+        default: false,
     }
 });
 
