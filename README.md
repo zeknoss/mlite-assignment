@@ -8,7 +8,7 @@ Requirements:
 
 - [x] Create 2 draggable blocks: Text and Image.
 - [x] The content of Text block should be editable.
-- [ ] Image block can be edited by selecting one of the 3-4 predefined images.
+- [X] Image block can be edited by selecting one of the 3-4 predefined images.
 - [ ] The user should be able to rearrange, duplicate and delete blocks.
 - [ ] Landing page data like the text content, links to images, block order, etc. should be exported to a JSON format when the user clicks the “Save” button (console.log is enough).
 - [x] Style the application using CSS or a CSS framework of your choice (e.g., Tailwind CSS).
