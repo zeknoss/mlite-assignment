@@ -2,9 +2,8 @@
     position: sticky;
     left: auto;
     top: 1rem;
-    width: auto;
-    display: inline-flex;
-    gap: .2rem;
+    display: flex;
+    margin-bottom: 1rem;
     border-radius: .75rem;
     overflow: hidden;
     background: rgba(#fff, 0.5);
@@ -12,21 +11,26 @@
     z-index: 100;
     text-align: right;
 
-    button {
-        border: 0;
-        outline: none;
-        background: #fff;
-        color: #ff3c00;
+    .logo {
+        background: #ff3c00;
+        color: #fff;
         display: inline-flex;
-        padding: .3rem .5rem;
+        align-items: center;
+        gap: .5rem;
+        font-weight: 500;
+        padding: 0 .5rem;
 
-        &:hover {
-            color: #fff;
-            background: #ff3c00;
+        small {
+            font-size: .75rem;
+            letter-spacing: 1px;
+            transform: translateY(1px);
         }
+    }
 
-        > span {
-            margin: auto;
-        }
+    nav {
+        display: inline-flex;
+        margin-left: auto;
+        gap: .2rem;
+        overflow: hidden;
     }
 }

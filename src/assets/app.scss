@@ -14,6 +14,27 @@ main {
     padding: 1rem;
     border-radius: .75rem;
     position: relative;
-    background: #c0c0c0;
+    background: #e7e7e7;
     min-height: calc(100vh - 4rem);
 }
+
+.btn {
+    border: 0;
+    outline: none;
+    background: #fff;
+    color: #ff3c00;
+    display: inline-flex;
+    padding: .3rem .5rem;
+    cursor: pointer;
+
+    &:hover {
+        color: #fff;
+        background: #ff3c00;
+    }
+
+    > span {
+        margin: auto;
+    }
+}
+
+@import url(canvas.scss);

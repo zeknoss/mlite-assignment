@@ -12,6 +12,7 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
+    "@vueup/vue-quill": "^1.2.0",
     "floating-vue": "^5.2.2",
     "pinia": "^2.3.0",
     "vue": "^3.5.13",

@@ -1,0 +1,32 @@
+.app-canvas {
+    .canvas-layer {
+        background: #dddddd;
+        border: 2px solid rgba(#ccc,.3);
+        border-radius: .75rem;
+        overflow: hidden;
+
+        .ql-container.ql-snow {
+            border: 0 !important;
+        }
+
+        &.text-layer {
+            .layer-text {
+                font-size: 13px;
+                line-height: 1.42;
+                padding: 1rem;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    footer {
+        display: flex;
+        justify-content: end;
+        padding: 1rem;
+    }
+}

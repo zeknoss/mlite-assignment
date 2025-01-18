@@ -1,6 +1,12 @@
 <template>
     <ul class="app-canvas" ref="leSortable">
-        <CanvasLayer v-for="layer of layers" :key="layer.id" :layer="layer" />
+        <CanvasLayer
+            v-for="layer of layers"
+            :key="layer.id"
+            :edit-active="layer.id === activeId"
+            :layer="layer"
+            @toggle-edit="activeId = $event"
+        />
     </ul>
 </template>
 
@@ -13,4 +19,6 @@ const store = useAppStore();
 const layers = computed(() => store.layers.filter(l => l.parent_id === null));
 
 const leSortable = ref<HTMLElement | null>(null);
+
+const activeId = ref('');
 </script>

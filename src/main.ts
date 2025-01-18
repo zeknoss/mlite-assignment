@@ -1,5 +1,6 @@
 import './assets/app.scss';
 import 'floating-vue/dist/style.css';
+import '@vueup/vue-quill/dist/vue-quill.snow.css';
 
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
